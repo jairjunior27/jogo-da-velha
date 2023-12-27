@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages-css/estilo.css">
+    <title>Jogo da Velha</title>
+  </head>
+  <body>
+    <h1>Jogo da Velha</h1>
+
+    <div class="placar">
+        <div class="player-x">Player-X</div><span class="p-x">0</span> X <span class="p-o">0</span>
+        <div class="player-o">Player-O</div>
+    </div>
+    <div class="container">
+      <div class="item b r" data-item="a1"></div>
+      <div class="item b r" data-item="a2"></div>
+      <div class="item b" data-item="a3"></div>
+
+      <div class="item b r" data-item="b1"></div>
+      <div class="item b r" data-item="b2"></div>
+      <div class="item b" data-item="b3"></div>
+
+      <div class="item r" data-item="c1"></div>
+      <div class="item r" data-item="c2"></div>
+      <div class="item" data-item="c3"></div>
+    </div>
+    
+    <div class="info">
+        <div class="infoItem">
+            <div class="info">É a vez do Player:</div>
+            <div class="vez">--</div>
+        </div>
+        <div class="infoItem">
+            <div class="info">Empate:</div>
+            <div class="empate">--</div>
+        </div>
+    </div>
+    <script src="./pages-js/script.js"></script>
+  </body>
+</html>
