@@ -3,16 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages-css/estilo.css">
+    <link rel="stylesheet" href="./src/pages-css/estilo.css" />
     <title>Jogo da Velha</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="conteudo-modal">
+        <h2>##Jogo da velha##</h2>
+        <img class="imgJogo" src="./src/assets/images/imgJogo.png" alt="" />
+        <p class="texto-digitalizado"></p>
+      </div>
+    </div>
     <h1>Jogo da Velha</h1>
 
+    <select id="escolha-jogador" class="escolha-jogador">
+      <option value="">Escolha O Jogador</option>
+      <option value="X">Player-X</option>
+      <option value="O">Player-O</option>
+    </select>
+
     <div class="placar">
-        <div class="player-x">Player-X</div><span class="p-x">0</span> x <span class="p-o">0</span>
-        <div class="player-o">Player-O</div>
+      <div class="player">Player - <span class="jogador_p"></span></div>
+      <span class="p-v">--</span> x <span class="c-v">--</span>
+      <div class="computer">Computer - <span class="jogador_c"></span></div>
     </div>
+    <h2 class="vencedor"></h2>
     <div class="container">
       <div class="item b r" data-item="a1"></div>
       <div class="item b r" data-item="a2"></div>
@@ -26,17 +41,22 @@
       <div class="item r" data-item="c2"></div>
       <div class="item" data-item="c3"></div>
     </div>
-    
+
     <div class="info">
-        <div class="infoItem">
-            <div class="infoText">É a vez do Player:</div>
-            <div class="vez">X</div>
-        </div>
-        <div class="infoItem">
-            <div class="infoText">Empate:</div>
-            <div class="empate">01</div>
-        </div>
+      <div class="infoItem">
+        <div class="infoText">Empate:</div>
+        <div class="empate">--</div>
+      </div>
+      <audio class="som">
+        <source class="somItem" type="audio/mp3" />
+      </audio>
     </div>
-    <script src="./pages-js/script.js"></script>
+
+    <div class="botoes">
+      <button class="jogar">Jogar</button>
+      <button class="finalizar">Finalizar</button>
+      <button class="resetar">&#8634;</button>
+    </div>
+    <script src="./src/pages-js/script.js"></script>
   </body>
 </html>

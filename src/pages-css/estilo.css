@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/images/imgFundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4646466b;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.conteudo-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+  background-color: #d3d3d3;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.conteudo-modal h2 {
+  margin-bottom: 10px;
+  color: #3f3e3e;
+}
+.conteudo-modal p {
+  margin-bottom: 10px;
+  color: #3d3c3c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.conteudo-modal .imgJogo {
+  height: 150px;
+  object-fit: cover;
+  margin: 15px 0;
+}
+h1 {
+  margin: 1.4rem 0;
+  color: #2e2e30;
+}
+
+.placar {
+  display: flex;
+}
+
+.player {
+  color: #a30000;
+}
+.computer {
+  color: #0505aa;
+}
+
+.player,
+.computer {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.p-v,
+.c-v {
+  margin: 0 7px;
+  font-weight: 700;
+  color: #242425;
+}
+
+.vencedor {
+  margin-top: 12px;
+  font-size: 19px;
+  padding: 10px;
+  color: #4e4e4e;
+  background: linear-gradient(
+    rgba(197, 197, 197, 0.5),
+    rgba(228, 228, 228, 0.295) 100%
+  );
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.escolha-jogador {
+  padding: 0.4rem;
+  margin-bottom: 20px;
+  background: rgb(212, 212, 212);
+  border-radius: 10px;
+  color: #2e2e30;
+  font-weight: bold;
+}
+
+.escolha-jogador:disabled {
+  opacity: 0.3;
+  cursor: no-drop;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1.9rem 0;
+}
+
+.item {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.item:hover {
+  opacity: 1;
+}
+
+.item.b {
+  border-bottom: 3px solid rgb(71, 68, 68);
+}
+.item.r {
+  border-right: 3px solid rgb(48, 46, 46);
+}
+
+.info {
+  padding: 0.3rem;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #000000a6;
+  background: linear-gradient(
+    rgba(197, 197, 197, 0.5),
+    rgba(228, 228, 228, 0.295) 100%
+  );
+}
+
+.infoItem {
+  margin: 0.3rem 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.botoes {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: 100px;
+  padding: 0.3rem;
+  margin: 10px;
+  border-radius: 5px;
+  border: 0;
+  color: #2e2e30;
+  background-color: rgb(213, 213, 218);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:last-child {
+  width: 50px;
+}
+
+.resetar {
+  cursor: pointer;
+  font-size: 15px;
+  color: rgb(121, 121, 124);
+}
+
+.resetar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.finalizar:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.empate {
+  margin-left: 8px;
+}
+
+.player-color {
+  color: #a30000;
+}
+
+.computer-color {
+  color: #0505aa;
+}
+
+.winner {
+  color: rgb(0, 70, 0);
+}
