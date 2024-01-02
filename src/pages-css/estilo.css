@@ -54,7 +54,7 @@ body {
 }
 .conteudo-modal p {
   margin: 10px;
-  font-size: 16px;
+  font-size: 22px;
   text-align: center;
   color: #c1d600;
   font-weight: 600;
@@ -62,9 +62,10 @@ body {
 }
 
 .conteudo-modal .imgJogo {
-  height: 150px;
+ 
   object-fit: cover;
-  margin: 15px 0;
+  margin: 20px;
+  height: 300px;
 }
 h1 {
   margin: 1.4rem 0;

@@ -9,7 +9,7 @@ aviso = "";
 jogador_P = 0;
 jogador_computer = 0;
 empate = 0;
-fraseAtual = 0;
+fraseAtual = 1;
 
 let caixa = {
   a1: "",
@@ -24,19 +24,23 @@ let caixa = {
 };
 
 let frasesJogo = [
-  "Seja bem vindo ao nosso Jogo da velha",
+  "Seja bem vindo ao nosso jogo da velha",
   "Jogo criado por JrCriações",
   "Siga as proximas instruções",
 
-  "Para iniciar o Jogo aperte o botão jogar",
-  "Em seguida escolha o jogagor de sua preferência",
-  "Para resetar aperte o botão resetar<br/> e escolha o jogador para continuar jogando",
+  "Para iniciar o Jogo",
+  " Aperte o botão jogar",
+  "Em seguida escolha o jogador",
+  "Para resetar aperte o botão resetar ",
+  " Escolha o jogador para continuar jogando ",
   "Para finalizar o jogo aperte o botão finalizar",
   "Divirta-se !!!",
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
   modal();
+  playAudio("./src/assets/audio/soloGuitarra.mp3");
+
   setInterval(() => {
     if (fraseAtual < frasesJogo.length) {
       query(".texto-digitalizado").innerHTML = frasesJogo[fraseAtual];
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setTimeout(() => {
     noModal();
-  }, 24000);
+  }, 30000);
 });
 
 all(".item").forEach((item) => {
@@ -144,10 +148,9 @@ const computerMove = () => {
 
     caixa[computer] = playerComputer;
 
-    // Retornar o índice escolhido pelo computador, se necessário
     return computer;
   } else {
-    return null; // ou algum valor que indique que não há jogada possível
+    return null;
   }
 };
 
