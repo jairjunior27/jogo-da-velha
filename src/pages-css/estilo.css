@@ -13,6 +13,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 10px 5px;
+  height: 100vh;
 }
 
 .modal {
@@ -22,7 +23,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #4646466b;
+  background-color: #464646b2;
   z-index: 1;
   align-items: center;
   justify-content: center;
@@ -34,19 +35,28 @@ body {
   align-items: center;
   justify-content: center;
   margin: 15px;
-  background-color: #d3d3d3;
+  background-color: #1b1b1bb0;
   padding: 15px;
   border-radius: 10px;
-  width: 300px;
+  max-width: 500px;
+  margin: 0 10px;
+}
+
+.conteudo-modal img {
+  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
 }
 
 .conteudo-modal h2 {
   margin-bottom: 10px;
-  color: #3f3e3e;
+  color: #c0c408;
 }
 .conteudo-modal p {
-  margin-bottom: 10px;
-  color: #3d3c3c;
+  margin: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #c1d600;
   font-weight: 600;
   text-align: center;
 }

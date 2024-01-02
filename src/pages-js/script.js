@@ -9,6 +9,7 @@ aviso = "";
 jogador_P = 0;
 jogador_computer = 0;
 empate = 0;
+fraseAtual = 0;
 
 let caixa = {
   a1: "",
@@ -21,6 +22,32 @@ let caixa = {
   c2: "",
   c3: "",
 };
+
+let frasesJogo = [
+  "Seja bem vindo ao nosso Jogo da velha",
+  "Jogo criado por JrCriações",
+  "Siga as proximas instruções",
+
+  "Para iniciar o Jogo aperte o botão jogar",
+  "Em seguida escolha o jogagor de sua preferência",
+  "Para resetar aperte o botão resetar<br/> e escolha o jogador para continuar jogando",
+  "Para finalizar o jogo aperte o botão finalizar",
+  "Divirta-se !!!",
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  modal();
+  setInterval(() => {
+    if (fraseAtual < frasesJogo.length) {
+      query(".texto-digitalizado").innerHTML = frasesJogo[fraseAtual];
+    }
+    fraseAtual++;
+  }, 3000);
+
+  setTimeout(() => {
+    noModal();
+  }, 24000);
+});
 
 all(".item").forEach((item) => {
   item.addEventListener("click", (e) => {
@@ -104,6 +131,8 @@ const renderInfo = () => {
   query(".p-v").innerHTML = jogador_P;
   query(".c-v").innerHTML = jogador_computer;
   query(".empate").innerHTML = empate;
+  query(".jogador_p").innerHTML = player;
+  query(".jogador_c").innerHTML = playerComputer;
 };
 
 const computerMove = () => {
@@ -115,12 +144,9 @@ const computerMove = () => {
 
     caixa[computer] = playerComputer;
 
-    console.log("Posição escolhida pelo computador:", computer);
-
     // Retornar o índice escolhido pelo computador, se necessário
     return computer;
   } else {
-    console.log("Não há posições vazias para o computador jogar.");
     return null; // ou algum valor que indique que não há jogada possível
   }
 };
@@ -198,6 +224,21 @@ const isFull = () => {
   return true;
 };
 
+const modal = () => {
+  query(".modal").style.display = "flex";
+  setTimeout(() => {
+    query(".conteudo-modal").style.opacity = 1;
+  }, 400);
+};
+const noModal = () => {
+  query(".conteudo-modal").style.opacity = 1;
+
+  setTimeout(() => {
+    query(".modal").style.display = "none";
+  }, 400);
+};
+
+query(".modal").addEventListener("click", modal);
 query(".jogar").addEventListener("click", playGame);
 query(".resetar").addEventListener("click", resetGame);
 query(".finalizar").addEventListener("click", fimGame);
